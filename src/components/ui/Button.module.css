@@ -1,0 +1,80 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.sm {
+  min-height: 2.25rem;
+  padding: 0.625rem 0.9rem;
+  font-size: var(--font-size-sm);
+}
+
+.md {
+  min-height: 2.75rem;
+  padding: 0.8rem 1.2rem;
+  font-size: var(--font-size-base);
+}
+
+.lg {
+  min-height: 3.25rem;
+  padding: 1rem 1.5rem;
+  font-size: var(--font-size-lg);
+}
+
+.primary {
+  background: var(--brand-green);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary:hover {
+  background: var(--brand-green-dark);
+  color: var(--neutral-white);
+}
+
+.secondary {
+  background: var(--brand-orange);
+  color: var(--neutral-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.secondary:hover {
+  background: var(--brand-orange-dark);
+  color: var(--neutral-900);
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--brand-green);
+  color: var(--brand-green-dark);
+}
+
+.outline:hover {
+  background: var(--brand-green-soft);
+  color: var(--brand-green-dark);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--brand-green-dark);
+}
+
+.ghost:hover {
+  background: var(--brand-green-soft);
+}

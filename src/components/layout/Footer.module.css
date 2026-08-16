@@ -1,0 +1,46 @@
+.footer {
+  margin-top: var(--spacing-4xl);
+  background: #0f1720;
+  color: var(--neutral-white);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem var(--container-padding);
+  text-align: center;
+}
+
+.title {
+  color: var(--neutral-white);
+  margin-bottom: 0.75rem;
+}
+
+.text {
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.text a {
+  color: var(--brand-orange-light);
+}
+
+.motto {
+  margin: 1.5rem auto;
+  padding: 0.9rem 1rem;
+  max-width: 720px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--brand-orange-light);
+  font-weight: 700;
+}
+
+.copy,
+.credits {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.credits a {
+  color: var(--brand-green-light);
+}
