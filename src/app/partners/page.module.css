@@ -1,0 +1,74 @@
+.partnersSection {
+  text-align: center;
+}
+
+.sectionHeader {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.sectionHeader p {
+  font-size: 1.05rem;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.logoCard {
+  background: var(--neutral-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.logoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(8, 180, 79, 0.25);
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  margin-bottom: 1rem;
+  background: var(--neutral-50);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.logoImage {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.logoCard h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.logoCard p {
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+}
+
+.ctaSection {
+  text-align: center;
+}
+
+.ctaBox {
+  max-width: 760px;
+  margin: 0 auto;
+}
+

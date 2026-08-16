@@ -2,38 +2,22 @@
   min-height: 100vh;
 }
 
-.hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    linear-gradient(135deg, var(--brand-green-dark), var(--brand-green));
-  color: var(--neutral-white);
-  padding: 5rem 0;
-  text-align: center;
-}
-
-.heroContent {
-  max-width: 760px;
-}
-
-.heroContent h1,
-.heroContent h2 {
-  color: var(--neutral-white);
-}
-
-.heroContent p {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.heroContent span {
-  display: inline-block;
-  color: var(--brand-orange-light);
-  font-weight: 700;
-  margin-top: 0.5rem;
-}
-
 .story {
   background: var(--neutral-white);
+}
+
+.storyIntro {
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--brand-orange-dark);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .missionVision {
@@ -51,9 +35,7 @@
 .teamCard,
 .workCard,
 .impactCard {
-  background: var(--neutral-white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  composes: card from "../../components/ui/Card.module.css";
   padding: 1.25rem;
 }
 
@@ -155,29 +137,8 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
-.ctaBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 1rem;
-  border-radius: 6px;
-  background: var(--brand-orange);
-  color: #111;
-  font-weight: 700;
-  margin-top: 0.5rem;
-}
-
-.ctaBtn:hover {
-  background: var(--brand-orange-light);
-  color: #111;
-}
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 4rem 0;
-  }
-
   .mvGrid {
     grid-template-columns: 1fr;
   }

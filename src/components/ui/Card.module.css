@@ -1,0 +1,13 @@
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: var(--neutral-white);
+}
+
+.surface {
+  background: #f8faf8;
+}
+
+.shadow {
+  box-shadow: var(--shadow-sm);
+}
