@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import PageHero from '@/components/ui/PageHero';
 import Section from '@/components/ui/Section';
@@ -83,12 +84,12 @@ export default function NewsPage() {
                 <p>{item.summary}</p>
 
                 <div className={styles.actions}>
-                  <a href="/gallery" className={styles.primaryLink}>
+                  <Link href="/gallery" className={styles.primaryLink}>
                     View Gallery
-                  </a>
-                  <a href="/contact" className={styles.secondaryLink}>
+                  </Link>
+                  <Link href="/contact" className={styles.secondaryLink}>
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -104,12 +105,12 @@ export default function NewsPage() {
             achievements, and community stories as our work grows.
           </p>
           <div className={styles.actions}>
-            <a href="/projects" className={styles.primaryLink}>
+            <Link href="/projects" className={styles.primaryLink}>
               Explore Our Projects
-            </a>
-            <a href="/contact" className={styles.secondaryLink}>
+            </Link>
+            <Link href="/contact" className={styles.secondaryLink}>
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </Section>
