@@ -1,6 +1,6 @@
 .footer {
   margin-top: var(--spacing-4xl);
-  background: #0f1720;
+  background: #067a38;
   color: var(--neutral-white);
 }
 
@@ -22,7 +22,7 @@
 }
 
 .text a {
-  color: var(--brand-orange-light);
+  color: #ffd199;
 }
 
 .motto {
@@ -31,7 +31,7 @@
   max-width: 720px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  color: var(--brand-orange-light);
+  color: #ffd199;
   font-weight: 700;
 }
 
@@ -42,5 +42,5 @@
 }
 
 .credits a {
-  color: var(--brand-green-light);
+  color: #c9ffd9;
 }

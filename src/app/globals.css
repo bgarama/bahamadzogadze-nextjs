@@ -6,14 +6,14 @@
 :root {
   /* Brand */
   --brand-green: #08b44f;
-  --brand-green-dark: #078a3e;
-  --brand-green-light: #35c56d;
-  --brand-green-soft: #e7f8ed;
+  --brand-green-dark: #067a38;
+  --brand-green-light: #3cc96f;
+  --brand-green-soft: #e8f7ee;
 
   --brand-orange: #f4a041;
   --brand-orange-dark: #d98922;
   --brand-orange-light: #f8bb6b;
-  --brand-orange-soft: #fff2df;
+  --brand-orange-soft: #fff1df;
 
   /* Neutrals */
   --neutral-white: #ffffff;
