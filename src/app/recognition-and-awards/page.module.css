@@ -1,0 +1,109 @@
+.intro {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 0.75rem;
+}
+
+.intro p {
+  color: var(--color-text-muted, #5b6470);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-muted, #5b6470);
+}
+
+.spotlight {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.spotlightContent h2 {
+  margin-bottom: 0.75rem;
+}
+
+.spotlightContent p {
+  color: var(--color-text-muted, #5b6470);
+  margin-bottom: 1.25rem;
+}
+
+.imageWrap {
+  position: relative;
+  min-height: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.primaryLink {
+  background: #0f766e;
+  color: #fff;
+}
+
+.primaryLink:hover {
+  background: #115e59;
+}
+
+.secondaryLink {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  background: #fff;
+}
+
+.secondaryLink:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 900px) {
+  .spotlight {
+    grid-template-columns: 1fr;
+  }
+}

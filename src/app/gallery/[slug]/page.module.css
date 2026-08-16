@@ -1,0 +1,102 @@
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 4.5rem 0 2.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.breadcrumb {
+  margin-bottom: 1rem;
+  color: var(--color-text-muted, #5b6470);
+}
+
+.breadcrumb a {
+  color: #0f766e;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.hero h1 {
+  margin-bottom: 0.75rem;
+}
+
+.meta {
+  margin-bottom: 1rem;
+  color: var(--color-text-muted, #5b6470);
+}
+
+.description {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--color-text-muted, #5b6470);
+}
+
+.section {
+  padding: 3.5rem 0 4rem;
+}
+
+.imageGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.imageWrap {
+  position: relative;
+  min-height: 280px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.primaryLink {
+  background: #0f766e;
+  color: #fff;
+}
+
+.primaryLink:hover {
+  background: #115e59;
+}
+
+.secondaryLink {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  background: #fff;
+}
+
+.secondaryLink:hover {
+  background: #f8fafc;
+}
