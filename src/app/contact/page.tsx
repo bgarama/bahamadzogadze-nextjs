@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import PageHero from '@/components/ui/PageHero';
+import Button from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -35,15 +37,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className="container">
-          <h1>Contact Us</h1>
-          <p>
-            Reach out to BAHA MADZO GADZE FOR CHARITY for partnerships,
-            volunteering, programs, and community engagement.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Us"
+        subtitle="Reach out to BAHA MADZO GADZE FOR CHARITY for partnerships, volunteering, programs, and community engagement."
+      />
 
       <section className={`${styles.contactSection} section`}>
         <div className="container">
@@ -69,14 +66,14 @@ export default function ContactPage() {
                 <strong>💬 WhatsApp:</strong>
               </p>
 
-              <a
-                className={styles.whatsappBtn}
+              <Button
                 href="https://wa.me/254757285221?text=Hello%20BAHA%20MADZO%20GADZE%20FOR%20CHARITY,%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AI%20visited%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20initiatives.%0A%0AThank%20you!"
+                variant="secondary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Chat with Us on WhatsApp
-              </a>
+              </Button>
             </article>
 
             <article className={styles.contactCard}>
@@ -142,9 +139,9 @@ export default function ContactPage() {
               placeholder="Your Message"
               required
             />
-            <button type="submit" className={styles.submitBtn}>
+            <Button type="submit" variant="secondary">
               Send Message
-            </button>
+            </Button>
           </form>
 
           <p className={styles.formNote}>

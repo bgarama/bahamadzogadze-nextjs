@@ -78,3 +78,13 @@
 .ghost:hover {
   background: var(--brand-green-soft);
 }
+
+.soft {
+  background: var(--brand-green-soft);
+  color: var(--brand-green-dark);
+}
+
+.soft:hover {
+  background: #d8f0e1;
+  color: var(--brand-green-dark);
+}

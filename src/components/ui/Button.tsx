@@ -1,24 +1,30 @@
 import Link from 'next/link';
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from 'react';
 import styles from './Button.module.css';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'soft';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 type BaseProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
 };
 
 type ButtonAsButton = BaseProps &
-  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  ButtonHTMLAttributes<HTMLButtonElement> & {
     href?: never;
   };
 
-type ButtonAsLink = BaseProps & {
-  href: string;
-};
+type ButtonAsLink = BaseProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & {
+    href: string;
+  };
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
@@ -30,24 +36,33 @@ export default function Button(props: ButtonProps) {
     className = '',
   } = props;
 
-  const classes = [
-    styles.button,
-    styles[variant],
-    styles[size],
-    className,
-  ]
+  const classes = [styles.button, styles[variant], styles[size], className]
     .filter(Boolean)
     .join(' ');
 
   if ('href' in props && props.href) {
+    const {
+      href,
+      variant: _variant,
+      size: _size,
+      className: _className,
+      children: _children,
+      ...linkProps
+    } = props;
     return (
-      <Link href={props.href} className={classes}>
+      <Link href={href} className={classes} {...linkProps}>
         {children}
       </Link>
     );
   }
 
-  const { href, ...buttonProps } = props as ButtonAsButton;
+  const {
+    variant: _variant,
+    size: _size,
+    className: _className,
+    children: _children,
+    ...buttonProps
+  } = props as ButtonAsButton;
 
   return (
     <button className={classes} {...buttonProps}>

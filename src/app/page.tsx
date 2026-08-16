@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Button from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -55,15 +56,30 @@ export default function HomePage() {
             </p>
 
             <div className={styles.heroActions}>
-              <Link href="/who-we-are" className={styles.primaryBtn}>
+              <Button
+                href="/who-we-are"
+                variant="secondary"
+                size="lg"
+                className={styles.heroActionButton}
+              >
                 Who We Are
-              </Link>
-              <Link href="/projects" className={styles.primaryBtn}>
+              </Button>
+              <Button
+                href="/projects"
+                variant="secondary"
+                size="lg"
+                className={styles.heroActionButton}
+              >
                 Projects
-              </Link>
-              <Link href="/baha-digital" className={styles.primaryBtn}>
+              </Button>
+              <Button
+                href="/baha-digital"
+                variant="secondary"
+                size="lg"
+                className={styles.heroActionButton}
+              >
                 BAHA Digital
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -90,9 +106,9 @@ export default function HomePage() {
               <article key={project.title} className={styles.programCard}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <Link href={project.href} className={styles.cardBtn}>
+                <Button href={project.href} variant="soft" size="sm">
                   Learn More
-                </Link>
+                </Button>
               </article>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
+import Button from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ const values = [
   'Community Participation',
   'Sustainability',
   'Education & Awareness',
-  'Transparency Integrity & Accountability',
+  'Transparency, Integrity & Accountability',
   'Innovation & Collaboration',
 ];
 
@@ -108,18 +109,17 @@ const impactStats = [
 export default function WhoWeArePage() {
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className={`container ${styles.heroContent}`}>
-          <h1>Who We Are</h1>
-          <h2>BAHA MADZO GADZE FOR CHARITY</h2>
-          <p>Founded in 2017</p>
-          <span>Working Together for a Cleaner, Greener Kilifi*</span>
-        </div>
-      </section>
+      <PageHero
+        title="Who We Are"
+        subtitle="Learn about BAHA MADZO GADZE FOR CHARITY, our story, mission, values, leadership, and commitment to a cleaner, greener Kilifi."
+      />
 
       <section className={`${styles.story} section`}>
         <div className="container">
-          <h2>Our Story</h2>
+          <div className={styles.storyIntro}>
+            <span className={styles.eyebrow}>Founded in 2017</span>
+            <h2>Our Story</h2>
+          </div>
 
           <p>
             BAHA MADZO GADZE FOR CHARITY is a community-based environmental
@@ -245,9 +245,9 @@ export default function WhoWeArePage() {
         <div className="container">
           <h2>USAFI WA MAZINGIRA YETU NI JUKUMU LETU SOTE</h2>
           <p>Keeping our environment clean is everyone&apos;s responsibility.</p>
-          <Link href="/contact" className={styles.ctaBtn}>
+          <Button href="/contact" variant="secondary" size="lg">
             Join Our Mission
-          </Link>
+          </Button>
         </div>
       </section>
     </div>

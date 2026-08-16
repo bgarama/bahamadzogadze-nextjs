@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
+import Button from '@/components/ui/Button';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -79,17 +80,10 @@ const impactStats = [
 export default function ProjectsPage() {
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
-        <div className={`container ${styles.heroContent}`}>
-          <h1>Projects</h1>
-          <h2>BAHA MADZO GADZE FOR CHARITY</h2>
-          <p>
-            Since 2017, we have been working with communities, schools, partners,
-            and volunteers to build a cleaner, healthier, and more sustainable
-            future.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Projects"
+        subtitle="Explore the community-driven environmental, education, climate, waste management, and digital innovation programs creating long-term impact in Kilifi County."
+      />
 
       <section className={`${styles.intro} section`}>
         <div className="container">
@@ -148,9 +142,9 @@ export default function ProjectsPage() {
             sustainable development.
           </p>
 
-          <Link href="/contact" className={styles.ctaBtn}>
+          <Button href="/contact" variant="secondary" size="lg">
             Contact Us
-          </Link>
+          </Button>
         </div>
       </section>
     </div>
